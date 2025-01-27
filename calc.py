@@ -24,6 +24,8 @@ def power(x, y):
     return x ** y
 def cube(x):
     return x ** 3
+def percentage(a, b):
+    return (a * b) / 100
 
 
 print("1. Сложение")
@@ -33,7 +35,8 @@ print("4. Деление")
 print("5. Квадратный корень")
 print("6. Возведение в квадрат")
 print("7. Возведение в третью степень")
-choice = input("Введите номер операции (1/2/3/4/5/6/7): ")
+print("8. Процент")
+choice = input("Введите номер операции (1/2/3/4/5/6/7/8): ")
 if choice in ['1', '2', '3', '4',  ]:
  x = float(input("Введите первое число: "))
  y = float(input("Введите второе число: "))
@@ -53,9 +56,12 @@ elif choice == '6':
 elif choice == '5':
     x = float(input("Введите число для вычисления квадратного корня: "))
     print(f"Квадратный корень из {x} = {sqrt(x)}")
-elif choice == '7':  # исправлено на '7' вместо другого номера
+elif choice == '7': 
     x = float(input("Введите число для возведения в третью степень: "))
     print(f"{x} ^ 3 = {cube(x)}")
-
+elif choice == '8':
+    a = float(input("Введите число: "))
+    b = float(input("Введите процент: "))
+    print(f"{b}% от {a} = {percentage(a, b)}")
 else:
     print("Неверный ввод")
