@@ -24,15 +24,17 @@ def power(x, y):
     return x ** y
 def cube(x):
     return x ** 3
+
+
 print("1. Сложение")
 print("2. Вычитание")
 print("3. Умножение")
 print("4. Деление")
 print("5. Квадратный корень")
-print("6. Возведение в степень")
+print("6. Возведение в квадрат")
 print("7. Возведение в третью степень")
 choice = input("Введите номер операции (1/2/3/4/5/6/7): ")
-if choice in ['1', '2', '3', '4', '6']:
+if choice in ['1', '2', '3', '4',  ]:
  x = float(input("Введите первое число: "))
  y = float(input("Введите второе число: "))
 
@@ -45,12 +47,13 @@ elif choice == '3':
 elif choice == '4':
     print(f"{x} / {y} = {divide(x, y)}")
 elif choice == '6':
-        print(f"{x} ^ {y} = {power(x, y)}")
+    x = float(input("Введите число для возведения в квадрат: "))
+    print(f"{x} ^ 2 = {power(x, 2)}")
 
 elif choice == '5':
     x = float(input("Введите число для вычисления квадратного корня: "))
     print(f"Квадратный корень из {x} = {sqrt(x)}")
-elif choice == '7':
+elif choice == '7':  # исправлено на '7' вместо другого номера
     x = float(input("Введите число для возведения в третью степень: "))
     print(f"{x} ^ 3 = {cube(x)}")
 
